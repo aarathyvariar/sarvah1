@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarvah Dance Academy</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+  function toggleMenu() {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("active");
+  }
+</script>
+
+
+</head>
+<body>
+
+  <!-- Hamburger Menu Icon 
+  <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+
+
+  Sidebar Navigation Links 
+  <div class="side-nav" id="sidebar">
+  <a href="batches.html">Trainings</a>
+  <a href="instructors.html">Instructors</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact Us</a>
+</div>-->
+<!-- Hamburger Icon -->
+<div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+
+<!-- Sidebar -->
+<div class="side-nav" id="sidebar">
+  <a href="trainings.html">Trainings</a>
+  <a href="instructors.html">Instructors</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact Us</a>
+</div>
+
+
+
+  <!-- Hero Section (Split View) -->
+  <div class="hero">
+
+    <!-- Left Side with Green Background -->
+    <div class="left-side">
+      <!-- Content intentionally left empty to focus on layout -->
+    </div>
+
+    <!-- Right Side with Hero Image -->
+    <div class="right-side">
+      <img src="dance4.jpg" alt="Dancer">
+    </div>
+
+    <!-- Logo Overlay in Center -->
+    <div class="logo-overlay">
+      <img src="Sarvah.PNG" alt="Sarvah Logo">
+      <p class="slogan">
+        ~ By Gayatri Inaayat
+      </p>
+    </div>
+
+    <!-- Top Right Navigation Links -->
+      <div class="top-nav">
+      <a href="#about">About</a>
+      <a href="#performances">Performances</a>
+      <a href="#studio">Our Studio</a>
+    </div>
+
+  </div>
+
+  <!-- About Section -->
+<section id="about" class="alt-section">
+  <div class="about-wrapper">
+    <!-- Image on the Left -->
+    <div class="about-image">
+      <img src="dance5.png" alt="About Sarvah">
+    </div>
+
+    <!-- Text on the Right -->
+    <div class="about-text">
+      <h2>About</h2>
+      <p>It is a long established fact that a reader will be distracted by the readable 
+        content of a page when looking at its layout. The point of using Lorem Ipsum is that 
+        it has a more-or-less normal distribution of letters, as opposed to using 'Content here, 
+        content here', making it look like readable English. Many desktop publishing 
+        packages and web page editors now use Lorem Ipsum as their default model text, 
+        and a search for 'lorem ipsum' will uncover many web sites still in their infancy. 
+        Various versions have evolved over the years, sometimes by accident, sometimes on 
+        purpose (injected humour and the like).</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Performances Section -->
+<section id="performances" class="scroll-section">
+  <h2 class="section-heading">Performances</h2>
+  <div class="scroll-gallery">
+
+    <div class="performance-card">
+      <img src="dance2.png" alt="Performance 1">
+      <p class="caption">Classical Solo - 2022</p>
+    </div>
+
+    <div class="performance-card">
+      <img src="dance3.png" alt="Performance 2">
+      <p class="caption">Fusion Group - 2023</p>
+    </div>
+
+    <div class="performance-card">
+      <img src="dance1.jpg" alt="Performance 3">
+      <p class="caption">Temple Fest - 2021</p>
+    </div>
+
+    <div class="performance-card">
+      <img src="dance6.png" alt="Performance 4">
+      <p class="caption">Navratri Special</p>
+    </div>
+
+    <!-- Add more cards as needed -->
+
+  </div>
+</section>
+
+<!-- Our Studio Section -->
+<section id="studio" class="studio-section">
+  <div class="studio-content">
+    <div class="studio-left">
+      <h2 class="studio-heading">Our Studio</h2>
+      <p class="studio-address">
+        123 Dance Lane, London, Ontario, Canada<br>
+        Near Riverside Park, Behind Arts Museum
+      </p>
+      <iframe
+        class="studio-map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2911.7742188975973!2d-81.2546!3d42.9849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882ef1c843d47c07%3A0xa1f9c9671dfeb72b!2sLondon%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sin!4v1718593842445"
+        width="100%"
+        height="200"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+    <div class="studio-right">
+      <img src="studio.jpg" alt="Studio Image" class="studio-image">
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Sarvah Dance Academy. All rights reserved.</p>
+    <p>Quick Links | Privacy Policy | Terms of Service</p>
+  </footer>
+  <script>
+  function toggleMenu() {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("active");
+  }
+
+  // Optional: Close sidebar when clicking outside (for mobile)
+  document.addEventListener('click', function(event) {
+    const sidebar = document.getElementById("sidebar");
+    const menuIcon = document.querySelector('.menu-icon');
+    if (!sidebar.contains(event.target) && !menuIcon.contains(event.target)) {
+      sidebar.classList.remove("active");
+    }
+  });
+</script>
+</body>
+</html>

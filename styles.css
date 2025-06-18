@@ -1,0 +1,536 @@
+    /* General Reset and Fonts */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+  
+      body, html {
+        font-family: 'Playfair Display', serif;
+        scroll-behavior: smooth;
+      }
+      
+      @import url('https://fonts.googleapis.com/css2?family=Lora&family=Merriweather&display=swap');
+
+body {
+  font-family: 'Merriweather', serif;
+}
+
+section h2 {
+  font-family: 'Lora', serif;
+}
+
+.para {
+  font-family: 'Lora', serif;
+  font-size: 20px;
+}
+
+  
+      /* Hero Section Layout */
+      .hero {
+        display: flex;
+        height: 100vh;
+        width: 100%;
+        position: relative;
+      }
+  
+      /* Left Side - Sidebar Background */
+      .left-side {
+        background-color: #872341;
+        width: 35%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        color: white;
+      }
+  
+      /* Right Side - Hero Image */
+      .right-side {
+        width: 65%;
+      }
+  
+      .right-side img {
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+      }
+  
+      /* Sidebar Menu (hidden initially) */
+     /* Sidebar (hidden by default) 
+.side-nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #1f2b24; /* ORIGINAL sidebar color 
+  overflow-x: hidden;
+  transition: 0.3s ease;
+  z-index: 1000;
+  padding-top: 60px;
+}
+
+/* Sidebar when active 
+.side-nav.active {
+  width: 250px;
+}
+
+/* Sidebar links 
+.side-nav a {
+  display: block;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: white;
+  transition: 0.2s;
+}
+
+.side-nav a:hover {
+  background-color: #333;
+}
+
+  
+     .menu-icon {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1100;
+  color: white;  or change based on background */
+
+/* Hamburger Icon */
+/* Hamburger Icon */
+.menu-icon {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1001;
+  color: white;
+}
+
+/* Sidebar base (hidden) */
+.side-nav {
+  position: fixed;
+  top: 0;
+  left: -500px;  /*hidden initially */
+  width: 150px;
+  height: 100%;
+  background-color: #1f2b24;
+  overflow-y: auto;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  padding-top: 60px;
+}
+
+/* Active sidebar */
+.side-nav.active {
+  left: 0;
+}
+
+/* Sidebar links */
+.side-nav a {
+  display: block;
+  padding: 15px 25px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.side-nav a:hover {
+  background-color: #2d3a31;
+}
+
+/* Mobile Responsive Sidebar */
+@media (max-width: 600px) {
+  .side-nav {
+    width: 65%;
+  }
+}
+
+
+/* Responsive: Make sidebar narrower on small screens */
+@media (max-width: 600px) {
+  .side-nav.active {
+    width: 65%;
+  }
+}
+
+
+  
+      /* Top Right Menu */
+      .top-nav {
+        position: absolute;
+        top: 40px;
+        left: 80px;
+        display: flex;
+        gap: 20px;
+        z-index: 10;
+      }
+  
+      .top-nav a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+  
+      /* Centered Logo Overlay between sections */
+      .logo-overlay {
+        position: absolute;
+        top: 45%;
+        left: 20%; /* adjust to sit in the middle */
+        transform: translate(-50%, -50%);
+        z-index: 15;
+      }
+  
+      .logo-overlay img {
+        width: 500px;
+        max-width: 90vw;
+      }
+
+      .slogan {
+        color: white;
+        font-size: 25px;
+        padding-left: 27%;
+      }
+  
+      /* Section Styling */
+      section {
+        padding: 100px 40px;
+        background-color: #1f2b24;
+        color: white;
+        font-family: sans-serif;
+        font: geometric;
+
+      }
+  
+      section h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+  
+      /* Footer Styling */
+      footer {
+        background-color: #E17564;
+        color: white;
+        text-align: center;
+        padding: 40px;
+      }
+  
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .hero {
+          flex-direction: column;
+        }
+        .left-side, .right-side {
+          width: 100%;
+          height: 50vh;
+        }
+        .top-nav {
+          flex-direction: column;
+          top: 80px;
+          right: 20px;
+        }
+        .logo-overlay img {
+          width: 80%;
+        }
+      }
+
+      /* Background for About/Performances/Studio sections */
+.alt-section {
+  background-color: #09122C; /* Dark Olive Green - compliments #1f2b24 */
+  color: white;
+  padding: 80px 50px;
+}
+
+/* Flex Layout for Image + Text */
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* About Image Styling */
+.about-image {
+  flex: 1;
+  max-width: 400px;
+}
+
+.about-image img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  margin-left: 100px;
+}
+
+/* About Text Styling */
+.about-text {
+  flex: 1;
+  max-width: 600px;
+  margin-right: 100px;
+}
+
+.about-text h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-family: 'Lora', serif;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  font-family: 'Lora', serif;
+}
+
+/* Performances Section */
+#performances.alt-section {
+  background-color: #09122C; 
+  color: white;
+  padding: 80px 50px;
+}
+
+.performances-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.performances-image {
+  flex: 1;
+  max-width: 400px;
+}
+
+.performances-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.performances-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.performances-text h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.performances-text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Performances Section */
+.scroll-section {
+  background-color: #09122C; /* Goes well with #1f2b24 */
+  padding: 60px 30px;
+  color: white;
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-family: 'Playfair Display', serif;
+}
+
+.scroll-gallery {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 30px;
+  padding-bottom: 20px;
+  scrollbar-width: none; /* Firefox */
+}
+
+.scroll-gallery::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.performance-card {
+  flex: 0 0 auto;
+  width: 435px;
+  scroll-snap-align: start;
+  background-color: #BE3144;
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.performance-card img {
+  width: 400px;
+  height: 400px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.caption {
+  margin-top: 10px;
+  font-size: 16px;
+  font-family: 'Playfair Display', serif;
+}
+
+
+/* Our Studio Section */
+.studio-section {
+  background-color: #09122C;
+  padding: 60px 30px;
+  color: white;
+  font-family: 'Playfair Display', serif;
+}
+
+.studio-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.studio-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.studio-heading {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.studio-address {
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.studio-map {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.studio-right {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.studio-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Trainings Section Styling */
+.trainings-section {
+  background-color: #DCD7C9;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 2em;
+  margin-bottom: 40px;
+  font-family: 'Playfair Display', serif;
+  color: #1f2b24;
+}
+
+.batch-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.batch-box {
+  background-color: #A27B5C;
+  color: #000;
+  padding: 30px 25px;
+  border-radius: 20px;
+  width: 250px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.batch-box h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Lora', serif;
+}
+
+.batch-box ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 1.25em;
+  font-family: 'Lora', serif;
+}
+
+.batch-box:hover {
+  transform: translateY(-5px);
+}
+
+/* ------------------- Responsive Styles ------------------- */
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  .trainings-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+
+  .training-box {
+    width: 80%;
+    height: auto;
+    margin: 1rem 0;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .training-box h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .training-box ul {
+    padding-left: 1.5rem;
+  }
+
+  .menu-icon {
+    font-size: 1.8rem;
+    top: 20px;
+    left: 20px;
+  }
+
+  .side-nav {
+    width: 70%;
+    padding-top: 3rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+  }
+}
+
