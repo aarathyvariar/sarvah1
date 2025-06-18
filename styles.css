@@ -345,6 +345,7 @@ section h2 {
   font-size: 36px;
   margin-bottom: 40px;
   font-family: 'Playfair Display', serif;
+  color: white;
 }
 
 .scroll-gallery {
@@ -448,7 +449,7 @@ section h2 {
   font-size: 2em;
   margin-bottom: 40px;
   font-family: 'Playfair Display', serif;
-  color: #1f2b24;
+  color: #ffffff;
 }
 
 .batch-container {
